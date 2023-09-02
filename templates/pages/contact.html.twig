@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AuthController!{% endblock %}
+
+{% block body %}
+{% if error %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contactez Nous</h2>
+            <p>Nous vous encourageons à partager librement vos avis sur notre site d'apprentissage de langue maternelle. Contactez-nous dès maintenant!</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Addresse</h3>
+                        <p>SPARTE ROBOTICS <br> derrière le Glacier Moderne de Bonamoussadi <br> Niceau 4 - Porte 9</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Mobile</h3>
+                        <p>691-227-750 <br> 679-306-588</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>nopejijoyce313@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+           <!-- <div class="contactForm">
+                <form>
+                    <h2>Envoyer Un Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                    </div>
+                </form>
+            </div>-->
+            <div class="contactForm"></div>
+                <form>
+                    <h2>Envoyer Votre Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Nom Complet</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Ecrire Votre Message</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Envoyer">
+
+                    </div>
+
+                </form>
+        </div>
+    </section>
+</body>
+</html>
+
+{% endblock %}

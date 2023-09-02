@@ -1,0 +1,229 @@
+*,
+ *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family:'Tw Cen MT', sans-serif;
+}
+
+.header{
+    background-size: cover;
+    background-color: rgba(0, 0, 255, 0.642);
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(101, 251, 46, 0.839), rgba(0, 0, .1)),url('PHOTOS/PHOTO\ accueil.jpg') ; 
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+}
+
+#header {
+    position: relative;
+    background: linear-gradient(rgba(114, 255, 63, 0.839), rgba(0, 0, .1)),url('PHOTOS/PHOTO\ accueil.jpg') ; 
+}
+
+.topbar {
+    position : fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    width : 100%;
+    background : #fff;
+    padding : 30px;
+
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+nav .logo{
+    width: 160px;
+    cursor: pointer;
+    border-top: 5px;
+    border-bottom-left-radius: -10px;
+    margin-left: -100px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    padding-left: 400px;
+    text-align: right;
+    list-style-type: none;
+    margin-right: -100px;
+}
+
+ul li {
+    margin-right: 10px;
+}
+
+ul li a {
+    padding:  10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+ul li a::after{
+    content: '';
+    background:rgb(238, 113, 10);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transform: translate(-50%, 5px);
+    transition: 0,3s;
+}
+
+ul li a:hover::after {
+    width: 38%;
+
+}
+
+.site-header {
+    position: absolute;
+    bottom: 10%;
+    color: #fff;
+}
+
+.site-header p {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.site-header h1{
+    font-size: 120px;
+    line-height: 120px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background: url(../image/pattern.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: animate 10s linear 2s infinite alternate;
+
+}
+
+@keyframes animate {
+    100% {
+        background-position: -500px 0;
+    }
+}
+
+.site-header h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.site-header .liens{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.liens a{
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid white;
+    margin-right: 40px;
+    font-size: 18px;
+    transition: 0,3s;
+}
+
+.liens a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.liens a span {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 2;
+    margin-left: 10px;
+    
+}
+
+.social-icons{
+    position: absolute;
+    right: 5%;
+    bottom: 3%;
+}
+
+/*.social-icons a{
+    padding: 5px;
+     margin-right: 4px;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+
+}*/
+.liens span {
+    font-size: 18px;
+}
+
+/*2nd PART*/
+
+.article {
+    margin : 50px auto;
+    min-height : 203px;
+    max-width : 940px;
+}
+.article-a {
+    float : inherit;
+ }
+ 
+.article-img {
+    left : 0;
+    top : 0;
+    width : 500px;
+    margin-right : 25%;
+    float: left;
+ }
+
+hr {
+        height: 2px;
+        background-color: rgb(35, 25, 212);
+        border-color: rgb(47, 50, 224);
+ }
+
+.main {
+        display: flex; /* pour aligner l'image et le texte sur la même ligne */
+}
+      
+.main img {
+        float: left;
+        margin-right: 100px; /* pour ajouter un peu d'espace entre l'image et le texte */
+ }
+      
+.article {
+        float: right;
+}
+.main p{
+    margin-bottom: 100px;
+    color: gray;
+}
+
+.main .section img {
+    width: 10px;
+    height: 10px;
+    border-top: 5px;
+    border-bottom-left-radius: -10px;
+    margin-left: -100px;
+}
+

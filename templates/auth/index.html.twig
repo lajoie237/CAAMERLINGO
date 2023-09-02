@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AuthController!{% endblock %}
+
+{% block body %}
+{% if error %}
+        <div class="btn btn-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <section class="container">
+        <div class="title">
+            <img src="image/logo_CL_final-removebg-preview.png">
+            <p>Avec CAMERLINGO, Explorez les Langues Camerounaises !</p>
+
+        </div>
+        <form action="{{ path('app_login') }}" method="post" class="formulaire">
+            <input type="email" name="_username" id="username" placeholder="Adresse email ou numéro de téléphone">
+            <input type="password" name="_password" id="password" placeholder="Mot de passe">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <input type="submit" value="Se connecter" class="btn-submit" >
+            <a class="mdp-oublie" href="" >Mot de passe oublié ?</a>
+            <hr>
+            <a href="inscription.html" onclick="afficher()" class="btn-inscription">Créer un nouveau compte</a>
+        </form>
+    </section>
+
+   <section class="inscription">
+        <form action="">
+            <i onclick="afficher()" class="bi bi-x-circle-fill"></i>
+            <i class=""></i>
+            <h1>S'inscire</h1>
+            <h4>C'est rapide et facile...</h4>
+            <hr>
+            <div class="input-nom-prenom">
+                <input type="text" class="num-mdp" placeholder="Nom">
+                <input type="text" class="num-mdp" placeholder="Prénom">
+            </div>
+            <input type="email" class="num-mdp" placeholder="Numéro de téléphone ou email">
+            <input type="password" class="num-mdp" placeholder="Nouveau mot de passe">
+            <p class="label-class">
+                Date de naissance
+            </p>
+            <div class="date-naissance-select">
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+                <select>
+                    <option>Jan</option>
+                    <option>Fev</option>
+                </select>
+                <select>
+                    <option>2023</option>
+                    <option>2001</option>
+                </select>
+            </div>
+
+            <p class="label-class">
+                Genre
+            </p>
+           <div class="genres_liste">
+                <span >
+                    <label>Femme</label>
+                    <input type="radio" name="genre"> 
+                </span>
+                <span >
+                    <label>Homme</label>
+                    <input type="radio" name="genre"> 
+                </span>
+                <span >
+                    <label>Personnalisé</label>
+                    <input type="radio" name="genre"> 
+                </span>
+           </div>
+
+           <div class="text">
+                En cliquant sur S'inscrire, vous aceptez nos Termes et Conditons d'Utilisation <p></p>
+           </div>
+           <div class="center-btn-submit">
+            <input type="submit" value="S'inscrire" id="btn-s-inscrire">
+
+           </div>
+
+
+        </form>
+    </section>
+
+    <script>
+        function afficher(){
+            document.querySelector('.inscription').classList.toggle('active')
+        }
+    </script>
+
+{% endblock %}
